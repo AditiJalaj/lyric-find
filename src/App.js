@@ -7,13 +7,14 @@ const App=()=>{
   return (
     <div>
     <NavBar/>
-    <Router>
     <Context>
+    <Router>
     <Switch>
     <Route exact component={Container}/>
     </Switch>
-    </Context>
+    
     </Router>
+    </Context>
     </div>
   )
 }
