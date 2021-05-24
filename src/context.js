@@ -3,14 +3,14 @@ import Container from './components/Container';
 import Tracks from './components/Tracks'
 
 const Song= createContext()
-// const tracks={
-//     tracklist:[
-//         {track:{trackName:"ADI"}},
-//         {track:{trackName:"Jal"}}
-//     ]
-// }
+const tracks=[
+    
+        {track:{trackName:"ADI"}},
+        {track:{trackName:"Jal"}}
+   
+]
 
-const tracks="hello"
+// const tracks="hello"
 
 const Context = (props) => {
     return ( 

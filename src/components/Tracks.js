@@ -2,10 +2,15 @@ import {Song} from '../context'
 import {useContext} from 'react'
 
 const Tracks = () => {
-    const t=useContext(Song) //undefined
+    const t=useContext(Song) 
+
     return ( 
         <>
-        The songs are {t}
+        {
+            t.map((m)=>{
+                console.log(m)
+            })
+        }
         </>
          );
 }
