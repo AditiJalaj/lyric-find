@@ -5,3 +5,14 @@
     color: rgb(255, 255, 255);
     padding: 7px;
 }
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(12, 8, 8, 0.2);
+    padding: 2px 36px;
+    border-radius: 10px;
+   margin: 20px ;
+   background-color: rgb(233, 217, 211);
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(36, 2, 2, 0.2);
+}

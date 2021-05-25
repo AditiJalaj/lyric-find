@@ -11,23 +11,28 @@ const Song= createContext()
 
 const Context = (props) => {
     
-let [trackList,setTrackList]=useState([])
+    let intialState = {
+        track_list: [],
+        heading: ""
+      };
 
-const [heading,setHeading]=useState("")
+   const [state, setState] = useState(intialState);
 
     useEffect(()=>{
     axios.get( `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=in&f_has_lyrics=1&apikey=e68b24457aa707447caae1c9f7b56a10`)
     .then((res)=>{
        console.log(res.data)
        console.log("use effect ran")
-        setTrackList(res.data.message.body.track_list)
-        setHeading("Top 10 Tracks")
+       setState({
+        track_list: res.data.message.body.track_list,
+        heading: "TRENDING IN INDIA"
+      });
     })
     .catch((err)=>console.log(err))
     },[])
 
     return ( 
-        <Song.Provider value={trackList,heading}>
+        <Song.Provider value={[state, setState]}>
         {props.children}
         </Song.Provider>
      );
