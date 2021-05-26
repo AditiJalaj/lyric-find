@@ -1,40 +1,45 @@
 import axios from 'axios'
 import {useEffect, useState} from 'react'
 import Spinner from './Spinner'
+import {Link } from 'react-router-dom'
 
 const Lyrics = (props) => {
 
-    const intialState1={
-        lyrics:{},
-        track:{}
-    }
-    const [state,setState]=useState(intialState1)
+    const [track,setTrack]=useState({})
+    const [lyrics,setLyrics]=useState({})
 
     useEffect(()=>{
         axios.get( `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${props.match.params.id}&apikey=e68b24457aa707447caae1c9f7b56a10`)
     .then((res)=>{
-      // console.log(res.data)
- 
-       setState({lyrics:res.data.message.body.lyrics})
-
-       //now we make another request to endpoint-> track.get to get track info
+     
+        var lyrics=res.data.message.body.lyrics;
+        setLyrics({lyrics})
+       
+     //now we make another request to endpoint-> track.get to get track info
        return axios.get( `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${props.match.params.id}&apikey=e68b24457aa707447caae1c9f7b56a10`)
        .then((res)=>{ 
-           //console.log('from track.get ' , res.data)
-           setState({track:res.data.message.body.track})
+        //    console.log('from track.get ' , res.data)
+        //    setState({track:res.data.message.body.track})
+        var track=res.data.message.body.track
+        setTrack({track})
          });
     })
     .catch((err)=>console.log(err))
-    },[])
+    },[props.match.params.id])
 
 
 
-    //destructuring lyrics and track from state
-    const {track,lyrics}=state
-    console.log('track after useeffect ', track)
     
+    
+   // console.log('track after useeffect ', track)
+    //|| 
+    // lyrics===undefined || 
+    // Object.keys(track).length===0 ||
+    //  Object.keys(lyrics).length===0
         
-        if(track===undefined){
+    console.log('these are lyrics ', lyrics)  //undefined
+        if(track===undefined || Object.keys(track).length===0 ||lyrics===undefined ||Object.keys(lyrics).length===0)
+             {
             return(<div>
                 <Spinner/>
                 </div>) 
@@ -42,9 +47,10 @@ const Lyrics = (props) => {
 
       else{
            return (
-              <h1>
-               Lyrics
-               </h1>
+              <>
+              hello
+               <Link to='/'>Go back</Link>
+               </>
           )
 }
        
