@@ -16,3 +16,14 @@
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(36, 2, 2, 0.2);
 }
+
+.lyric-button{
+    background-color: rgb(15, 15, 20);
+    display: block;
+    color: white;
+    font-size: large;
+    padding: 6px;
+    text-align: center;
+    margin: 4px;
+    border-radius: 10px;
+}
