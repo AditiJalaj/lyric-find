@@ -1,6 +1,6 @@
 const NavBar = () => {
     return ( <nav className="navbar">
-        LyricSearch
+        Lyric-Find
         </nav> );
 }
  

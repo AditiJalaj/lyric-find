@@ -1,5 +1,5 @@
-
 import spinner from '../Spinner-2.gif'
+
 const Spinner = () => {
     return ( 
         <>

@@ -7,15 +7,17 @@ const Track = (props) => {
     
     return ( 
         <div className="card">
-        <h2> {track.artist_name}</h2>
+        <h2> <i className='fas fa-play'/> {track.track_name}</h2>
         <p> 
             <strong>
-            <i className='fas fa-play'/>Track </strong>: {track.track_name} <br/>
+            Artist </strong>: {track.artist_name} <br/>
         
             <strong>
               <i className="fas fa-compact-disc" /> Album
             </strong>
             : {track.album_name}
+
+            
         </p>
        <Link
        to={`lyrics/track/${track.track_id}`}
@@ -28,5 +30,5 @@ const Track = (props) => {
 export default Track;
 
 
-//for genre
-//track.primary_genres.music_genre_list[0].music_genre.music_genre_name
+
+

@@ -5,6 +5,7 @@ import EachTrack from './EachTrack'
 
 const Tracks = () => {
     const [state]=useContext(Song) 
+
   const { track_list, heading} = state;
   
   //track_list is the array
@@ -14,7 +15,7 @@ const Tracks = () => {
  else{
     return ( 
         <>
-        <h1 style={{textAlign:'center'}}>{heading}</h1>
+        <h2 style={{textAlign:'center'}}>{heading}</h2>
         <div>
         {track_list.map((item)=>{
             return <EachTrack key={item.track.track_id} track={item.track}/>

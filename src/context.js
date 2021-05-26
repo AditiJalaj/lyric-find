@@ -5,10 +5,6 @@ import axios from 'axios'
 
 const Song= createContext()
 
-//https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=us&f_has_lyrics=1&apikey=e68b24457aa707447caae1c9f7b56a10
-//e68b24457aa707447caae1c9f7b56a10
-//https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=5&country=it&f_has_lyrics=1&apikey=e68b24457aa707447caae1c9f7b56a10
-
 const Context = (props) => {
     
     let intialState = {
