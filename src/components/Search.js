@@ -5,12 +5,12 @@ import {useContext, useState} from 'react'
 const Search = () => {
 
     const [trackTitle, setTrackTitle]=useState('')
-    
+
     const handleChange =(e)=>{
         setTrackTitle(e.target.value)
     }
     return ( 
-        <div class="search-card">
+        <div className="search-card">
          
         <h1><i className="fas fa-music" /> Search for a song</h1>
         <p>Get the lyrics for a song</p>
@@ -23,7 +23,9 @@ const Search = () => {
         value={trackTitle}
         onChange={handleChange}/>
         </div>
-
+        <button className="search-button" type="submit">
+        Get Track Lyrics
+        </button>
         </form>
         </div>
      );

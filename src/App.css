@@ -6,13 +6,7 @@
     padding: 7px;
 }
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(12, 8, 8, 0.2);
-    padding: 2px 36px;
-    border-radius: 10px;
-   margin: 20px ;
-   background-color: rgb(233, 217, 211);
-}
+
 
 .search-card{
     border: 1px solid black;
@@ -21,9 +15,41 @@
     margin: 20px ;
     margin-bottom: 40px;
 }
+.search-input{
+    display:  inline-block;
+    margin: 10px;
+    padding: 8px;
+    width:50%;
+}
+.search-button{
+    width:30%;
+    background-color: #008CBA;
+    border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.search-button:hover{
+    background-color:#055975;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(12, 8, 8, 0.2);
+    padding: 2px 36px;
+    border-radius: 10px;
+   margin: 20px ;
+   background-color: rgb(233, 217, 211);
+}
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(36, 2, 2, 0.2);
 }
+
+
 
 .lyric-button{
     background-color: rgb(15, 15, 20);
@@ -37,7 +63,7 @@
 }
 
 .goback{
-    background-color: rgb(49, 19, 119);
+    background-color: rgb(51, 109, 17);
     color: white;
     padding: 10px;
     margin-top: 10px;
