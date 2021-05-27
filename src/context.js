@@ -21,7 +21,7 @@ const Context = (props) => {
        console.log("use effect ran")
        setState({
         track_list: res.data.message.body.track_list,
-        heading: "Trending in India"
+        heading: "Top 10"
       });
     })
     .catch((err)=>console.log(err))
