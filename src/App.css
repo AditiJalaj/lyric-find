@@ -10,7 +10,15 @@
     font-family: 'Bebas Neue', cursive;
 }
 
-
+.info{
+    font: xx-small;
+   
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+}
 
 .search-card{
     border: 1px solid black;
