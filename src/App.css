@@ -95,11 +95,13 @@
     margin: 10px;
     font-size: large;
     font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
    
 }
 
 .goback:hover{
     background-color: crimson;
+   
 }
 
 .lyrics-card{
@@ -116,11 +118,13 @@
 .lyrics-card-header{
     border: 1px solid black;
     text-align: center;
-    font-weight:bold;
     font-size: large;
     margin: 6px;
     padding:10px;
     font-family: 'Bebas Neue', cursive;
+    background-color: rgb(17, 55, 61);
+    border-radius: 10px;;
+    color:white;
 }
 
 
