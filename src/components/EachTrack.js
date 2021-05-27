@@ -6,7 +6,7 @@ const Track = (props) => {
     const {track} = props
     
     return ( 
-        <div className="card">
+        <div className="track-card">
         <h2> <i className='fas fa-play'/> {track.track_name}</h2>
         <p> 
             <strong>
@@ -21,7 +21,7 @@ const Track = (props) => {
         </p>
        <Link
        to={`lyrics/track/${track.track_id}`}
-       className='lyric-button'>
+       className='track-lyric-button'>
        <i className="fas fa-chevron-right"/> View Lyrics
        </Link>
         

@@ -15,7 +15,7 @@ const Tracks = () => {
  else{
     return ( 
         <>
-        <h2 style={{textAlign:'center'}}>{heading}</h2>
+        <h2 className="heading">{heading}</h2>
         <div>
         {track_list.map((item)=>{
             return <EachTrack key={item.track.track_id} track={item.track}/>

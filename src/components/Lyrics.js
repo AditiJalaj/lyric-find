@@ -44,16 +44,16 @@ const Lyrics = (props) => {
               </Link>
 
               
-              <div className="card">
-              <div className='card-header'>
+              <div className="lyrics-card">
+              <div className='lyrics-card-header'>
                {track.track.track_name} by {track.track.artist_name}
                </div>
-               <div className="card-body">
-             <p> {lyrics.lyrics && lyrics.lyrics.lyrics_body} </p>
+               <div className="lyrics-card-body">
+              <p> {lyrics.lyrics && lyrics.lyrics.lyrics_body} </p>
                </div>
                </div>
 
-               <ul>
+               <ul className="lyrics-info">
                <li> 
                <strong> Album ID</strong> : {track.track.album_id}</li>
 
