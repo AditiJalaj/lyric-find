@@ -10,3 +10,6 @@ Tech Stack
 3. React Hooks
 4. Axios 
 5. Font-Awesome
+
+Future-Updates->
+1.Add songs to playlist
